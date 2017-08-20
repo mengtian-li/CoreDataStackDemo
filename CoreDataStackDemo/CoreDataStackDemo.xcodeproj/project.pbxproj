@@ -15,6 +15,10 @@
 		C11109431F493FFB00809F97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C11109411F493FFB00809F97 /* LaunchScreen.storyboard */; };
 		C111094D1F49405F00809F97 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C111094B1F49405F00809F97 /* Model.xcdatamodeld */; };
 		C11109511F4941F800809F97 /* MTCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = C11109501F4941F800809F97 /* MTCoreDataStack.m */; };
+		C111095B1F4947DB00809F97 /* Doge+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C11109541F4947DB00809F97 /* Doge+CoreDataClass.m */; };
+		C111095C1F4947DB00809F97 /* Doge+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C11109561F4947DB00809F97 /* Doge+CoreDataProperties.m */; };
+		C111095D1F4947DB00809F97 /* Master+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C11109581F4947DB00809F97 /* Master+CoreDataClass.m */; };
+		C111095E1F4947DB00809F97 /* Master+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C111095A1F4947DB00809F97 /* Master+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,14 @@
 		C111094C1F49405F00809F97 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		C111094F1F4941F800809F97 /* MTCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTCoreDataStack.h; path = CoreDataStack/MTCoreDataStack.h; sourceTree = "<group>"; };
 		C11109501F4941F800809F97 /* MTCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTCoreDataStack.m; path = CoreDataStack/MTCoreDataStack.m; sourceTree = "<group>"; };
+		C11109531F4947DB00809F97 /* Doge+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Doge+CoreDataClass.h"; path = "ManagedObject/Doge+CoreDataClass.h"; sourceTree = "<group>"; };
+		C11109541F4947DB00809F97 /* Doge+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Doge+CoreDataClass.m"; path = "ManagedObject/Doge+CoreDataClass.m"; sourceTree = "<group>"; };
+		C11109551F4947DB00809F97 /* Doge+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Doge+CoreDataProperties.h"; path = "ManagedObject/Doge+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C11109561F4947DB00809F97 /* Doge+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Doge+CoreDataProperties.m"; path = "ManagedObject/Doge+CoreDataProperties.m"; sourceTree = "<group>"; };
+		C11109571F4947DB00809F97 /* Master+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Master+CoreDataClass.h"; path = "ManagedObject/Master+CoreDataClass.h"; sourceTree = "<group>"; };
+		C11109581F4947DB00809F97 /* Master+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Master+CoreDataClass.m"; path = "ManagedObject/Master+CoreDataClass.m"; sourceTree = "<group>"; };
+		C11109591F4947DB00809F97 /* Master+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Master+CoreDataProperties.h"; path = "ManagedObject/Master+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C111095A1F4947DB00809F97 /* Master+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Master+CoreDataProperties.m"; path = "ManagedObject/Master+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,7 @@
 		C11109321F493FFB00809F97 /* CoreDataStackDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C11109521F49478C00809F97 /* ManagedObject */,
 				C111094E1F4941D000809F97 /* CoreDataStack */,
 				C11109361F493FFB00809F97 /* AppDelegate.h */,
 				C11109371F493FFB00809F97 /* AppDelegate.m */,
@@ -93,6 +106,21 @@
 				C11109501F4941F800809F97 /* MTCoreDataStack.m */,
 			);
 			name = CoreDataStack;
+			sourceTree = "<group>";
+		};
+		C11109521F49478C00809F97 /* ManagedObject */ = {
+			isa = PBXGroup;
+			children = (
+				C11109531F4947DB00809F97 /* Doge+CoreDataClass.h */,
+				C11109541F4947DB00809F97 /* Doge+CoreDataClass.m */,
+				C11109551F4947DB00809F97 /* Doge+CoreDataProperties.h */,
+				C11109561F4947DB00809F97 /* Doge+CoreDataProperties.m */,
+				C11109571F4947DB00809F97 /* Master+CoreDataClass.h */,
+				C11109581F4947DB00809F97 /* Master+CoreDataClass.m */,
+				C11109591F4947DB00809F97 /* Master+CoreDataProperties.h */,
+				C111095A1F4947DB00809F97 /* Master+CoreDataProperties.m */,
+			);
+			name = ManagedObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,8 +194,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C111095B1F4947DB00809F97 /* Doge+CoreDataClass.m in Sources */,
+				C111095D1F4947DB00809F97 /* Master+CoreDataClass.m in Sources */,
 				C111093B1F493FFB00809F97 /* ViewController.m in Sources */,
+				C111095C1F4947DB00809F97 /* Doge+CoreDataProperties.m in Sources */,
 				C11109381F493FFB00809F97 /* AppDelegate.m in Sources */,
+				C111095E1F4947DB00809F97 /* Master+CoreDataProperties.m in Sources */,
 				C11109351F493FFB00809F97 /* main.m in Sources */,
 				C11109511F4941F800809F97 /* MTCoreDataStack.m in Sources */,
 				C111094D1F49405F00809F97 /* Model.xcdatamodeld in Sources */,

@@ -1,0 +1,28 @@
+{
+  "master": {
+    "name": "Limengtian",
+    "age": 23
+  },
+  "doges": [
+    {
+      "name": "didi",
+      "age": 1
+    },
+    {
+      "name": "babi",
+      "age": 2
+    },
+    {
+      "name": "dahai",
+      "age": 1
+    },
+    {
+      "name": "pipi",
+      "age": 4
+    },
+    {
+      "name": "danhuang",
+      "age": 8
+    }
+  ]
+}

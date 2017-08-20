@@ -19,6 +19,7 @@
 		C111095C1F4947DB00809F97 /* Doge+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C11109561F4947DB00809F97 /* Doge+CoreDataProperties.m */; };
 		C111095D1F4947DB00809F97 /* Master+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C11109581F4947DB00809F97 /* Master+CoreDataClass.m */; };
 		C111095E1F4947DB00809F97 /* Master+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C111095A1F4947DB00809F97 /* Master+CoreDataProperties.m */; };
+		C11109601F49521500809F97 /* seed.json in Resources */ = {isa = PBXBuildFile; fileRef = C111095F1F49521500809F97 /* seed.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		C11109581F4947DB00809F97 /* Master+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Master+CoreDataClass.m"; path = "ManagedObject/Master+CoreDataClass.m"; sourceTree = "<group>"; };
 		C11109591F4947DB00809F97 /* Master+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Master+CoreDataProperties.h"; path = "ManagedObject/Master+CoreDataProperties.h"; sourceTree = "<group>"; };
 		C111095A1F4947DB00809F97 /* Master+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Master+CoreDataProperties.m"; path = "ManagedObject/Master+CoreDataProperties.m"; sourceTree = "<group>"; };
+		C111095F1F49521500809F97 /* seed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = seed.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				C11109391F493FFB00809F97 /* ViewController.h */,
 				C111093A1F493FFB00809F97 /* ViewController.m */,
 				C111093C1F493FFB00809F97 /* Main.storyboard */,
+				C111095F1F49521500809F97 /* seed.json */,
 				C111094B1F49405F00809F97 /* Model.xcdatamodeld */,
 				C111093F1F493FFB00809F97 /* Assets.xcassets */,
 				C11109411F493FFB00809F97 /* LaunchScreen.storyboard */,
@@ -183,6 +186,7 @@
 			files = (
 				C11109431F493FFB00809F97 /* LaunchScreen.storyboard in Resources */,
 				C11109401F493FFB00809F97 /* Assets.xcassets in Resources */,
+				C11109601F49521500809F97 /* seed.json in Resources */,
 				C111093E1F493FFB00809F97 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +365,7 @@
 				C11109491F493FFB00809F97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

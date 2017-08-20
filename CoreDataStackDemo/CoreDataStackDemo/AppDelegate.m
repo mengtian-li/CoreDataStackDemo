@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "MTCoreDataStack.h"
+#import "Master+CoreDataClass.h"
+#import "Doge+CoreDataClass.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self importSeedJsonSeedIfNeeded];
     return YES;
 }
 
@@ -47,5 +51,72 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - private
+
+- (void)importSeedJsonSeedIfNeeded {
+    
+    NSManagedObjectContext *context = [[MTCoreDataStack sharedInstance] managedContext];
+    
+    NSFetchRequest * fetchRequest = [Master fetchRequest];
+    fetchRequest.resultType = NSCountResultType;
+    
+    NSError *error;
+    NSArray *results = [context executeFetchRequest:fetchRequest error:&error];
+    if (!error) {
+        if ([results count] > 0) {
+            NSInteger masterCount = [[results objectAtIndex:0] integerValue];
+            if (masterCount <= 0) {
+                [self importJsonSeed];
+            }
+        } else {
+            [self importJsonSeed];
+        }
+        
+    }else {
+        [self importJsonSeed];
+    }
+    
+}
+
+- (void)importJsonSeed {
+    NSURL *jsonURL = [[NSBundle mainBundle] URLForResource:@"seed" withExtension:@"json"];
+    
+    NSError *error;
+    NSData *jsonData = [NSData dataWithContentsOfURL:jsonURL options:0 error:&error];
+    
+    if (!error) {
+        NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+        if (!error) {
+            
+            NSManagedObjectContext *context = [[MTCoreDataStack sharedInstance] managedContext];
+            
+            NSEntityDescription *masterEntity = [NSEntityDescription entityForName:@"Master" inManagedObjectContext:context];
+            NSEntityDescription *dogeEntity = [NSEntityDescription entityForName:@"Doge" inManagedObjectContext:context];
+            
+            NSDictionary *masterDict = jsonDict[@"master"];
+            if (![masterDict isKindOfClass:[NSDictionary class]]) {
+                return;
+            }
+            
+            Master *master = [[Master alloc] initWithEntity:masterEntity insertIntoManagedObjectContext:context];
+            master.name = masterDict[@"name"];
+            master.age = [masterDict[@"age"] integerValue];
+        
+            NSArray *doges = jsonDict[@"doges"];
+            
+            for (NSDictionary *dogeDict in doges) {
+                if (![dogeDict isKindOfClass:[NSDictionary class]]) {
+                    continue;
+                }
+                Doge *doge = [[Doge alloc] initWithEntity:dogeEntity insertIntoManagedObjectContext:context];
+                doge.name = dogeDict[@"name"];
+                doge.age = [dogeDict[@"age"] integerValue];
+                doge.master = master; //因为在DataModel 里设置了 inverse， 所以master 和 doge可以相互关联上
+            }
+            //一定要调用 save 方法，才能真正的将文件存入数据库
+            [[MTCoreDataStack sharedInstance] saveContext];
+        }
+    }
+}
 
 @end

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Doge" representedClassName="Doge" syncable="YES" codeGenerationType="class">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="master" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Master" inverseName="doges" inverseEntity="Master" syncable="YES"/>
+    </entity>
+    <entity name="Master" representedClassName="Master" syncable="YES" codeGenerationType="class">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="doges" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Doge" inverseName="master" inverseEntity="Doge" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Doge" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Master" positionX="133" positionY="-18" width="128" height="88"/>
+    </elements>
+</model>

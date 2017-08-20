@@ -13,6 +13,7 @@
 		C111093E1F493FFB00809F97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C111093C1F493FFB00809F97 /* Main.storyboard */; };
 		C11109401F493FFB00809F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C111093F1F493FFB00809F97 /* Assets.xcassets */; };
 		C11109431F493FFB00809F97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C11109411F493FFB00809F97 /* LaunchScreen.storyboard */; };
+		C111094D1F49405F00809F97 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C111094B1F49405F00809F97 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		C111093F1F493FFB00809F97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C11109421F493FFB00809F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C11109441F493FFB00809F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C111094C1F49405F00809F97 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				C11109391F493FFB00809F97 /* ViewController.h */,
 				C111093A1F493FFB00809F97 /* ViewController.m */,
 				C111093C1F493FFB00809F97 /* Main.storyboard */,
+				C111094B1F49405F00809F97 /* Model.xcdatamodeld */,
 				C111093F1F493FFB00809F97 /* Assets.xcassets */,
 				C11109411F493FFB00809F97 /* LaunchScreen.storyboard */,
 				C11109441F493FFB00809F97 /* Info.plist */,
@@ -153,6 +156,7 @@
 				C111093B1F493FFB00809F97 /* ViewController.m in Sources */,
 				C11109381F493FFB00809F97 /* AppDelegate.m in Sources */,
 				C11109351F493FFB00809F97 /* main.m in Sources */,
+				C111094D1F49405F00809F97 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +317,20 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C111094B1F49405F00809F97 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C111094C1F49405F00809F97 /* Model.xcdatamodel */,
+			);
+			currentVersion = C111094C1F49405F00809F97 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = ../Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C11109281F493FFB00809F97 /* Project object */;
 }

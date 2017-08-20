@@ -14,6 +14,7 @@
 		C11109401F493FFB00809F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C111093F1F493FFB00809F97 /* Assets.xcassets */; };
 		C11109431F493FFB00809F97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C11109411F493FFB00809F97 /* LaunchScreen.storyboard */; };
 		C111094D1F49405F00809F97 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C111094B1F49405F00809F97 /* Model.xcdatamodeld */; };
+		C11109511F4941F800809F97 /* MTCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = C11109501F4941F800809F97 /* MTCoreDataStack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		C11109421F493FFB00809F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C11109441F493FFB00809F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C111094C1F49405F00809F97 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		C111094F1F4941F800809F97 /* MTCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTCoreDataStack.h; path = CoreDataStack/MTCoreDataStack.h; sourceTree = "<group>"; };
+		C11109501F4941F800809F97 /* MTCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTCoreDataStack.m; path = CoreDataStack/MTCoreDataStack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 		C11109321F493FFB00809F97 /* CoreDataStackDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C111094E1F4941D000809F97 /* CoreDataStack */,
 				C11109361F493FFB00809F97 /* AppDelegate.h */,
 				C11109371F493FFB00809F97 /* AppDelegate.m */,
 				C11109391F493FFB00809F97 /* ViewController.h */,
@@ -80,6 +84,15 @@
 				C11109341F493FFB00809F97 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C111094E1F4941D000809F97 /* CoreDataStack */ = {
+			isa = PBXGroup;
+			children = (
+				C111094F1F4941F800809F97 /* MTCoreDataStack.h */,
+				C11109501F4941F800809F97 /* MTCoreDataStack.m */,
+			);
+			name = CoreDataStack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +169,7 @@
 				C111093B1F493FFB00809F97 /* ViewController.m in Sources */,
 				C11109381F493FFB00809F97 /* AppDelegate.m in Sources */,
 				C11109351F493FFB00809F97 /* main.m in Sources */,
+				C11109511F4941F800809F97 /* MTCoreDataStack.m in Sources */,
 				C111094D1F49405F00809F97 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
